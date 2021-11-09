@@ -676,7 +676,7 @@ export default {
       if (this.searchable) {
         this.$refs.search && this.$refs.search.blur()
       } else {
-        this.$el.blur()
+        this.$el && this.$el.blur()
       }
       if (!this.preserveSearch) this.search = ''
       this.$emit('close', this.getValue(), this.id)
